@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Diary</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="gate">
+    <form id="gate-form">
+      <h1>Task Diary</h1>
+      <label for="gate-input">Enter passcode</label>
+      <input type="password" id="gate-input" autocomplete="off" required>
+      <button type="submit">Unlock</button>
+      <p id="gate-error"></p>
+    </form>
+  </div>
+
+  <div id="app" hidden>
+    <header>
+      <h1>Task Diary</h1>
+      <form id="add-form">
+        <input type="text" id="add-input" placeholder="New task..." autocomplete="off" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <p id="status"></p>
+    </header>
+
+    <div class="board">
+      <section class="column">
+        <h2>Pending</h2>
+        <ul id="pending-list"></ul>
+      </section>
+      <section class="column">
+        <h2>Completed</h2>
+        <ul id="completed-list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
